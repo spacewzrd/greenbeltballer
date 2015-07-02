@@ -1,0 +1,45 @@
+<h1 id="title" class=".h1">Green Belt Baller</h1>
+
+<div id = "map-canvas"></div>
+<div id="legend"  style="z-index: 0; position: absolute; bottom: 11px; right: 0px;">
+  <h3>Legend</h3>
+  <div>
+    <img src="http://maps.google.com/mapfiles/ms/micons/cabs.png">
+    <strong>Parking</strong>
+  </div>
+  <div>
+    <img src="http://maps.google.com/mapfiles/ms/micons/hiker.png">
+    <strong>Hiking</strong>
+  </div>
+  <div>
+    <img src="http://maps.google.com/mapfiles/ms/micons/swimming.png">
+    <strong>Swimming</strong>
+  </div>
+</div>
+
+<div id="new" class="btn btn-info">
+  <%= link_to "New Post", new_post_path, id: "new_link", remote: true %>
+</div>  
+
+<table align="center" id="table">
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @posts.each do |post| %>
+      <tr>
+        <td id="posts"><%= post.post %></td>
+        <td><%= post.user_id %></td>
+        <td id="edit" class="btn btn-warning"><%= link_to 'Edit', edit_post_path(post), id: "edit_post", remote: true  %></td>
+        <td class="btn btn-danger" id="destroy"><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+

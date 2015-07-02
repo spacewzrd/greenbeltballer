@@ -1,0 +1,63 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+#map-canvas{
+	width: 60em;
+	height: 40em;
+	margin: 3em auto 3em auto;
+
+}
+
+#legend{
+	background: white;
+	padding: .25em;
+}
+#title{
+	text-align: center;
+	color: green;
+	font-size: 550%;
+
+}
+
+body{
+	background-image: url("http://i.imgur.com/YbsiHli.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+#destroy{
+	margin: 1em;
+	font-weight: bold;
+	color: black;
+
+}
+#edit{
+	font-weight: bold;
+}
+#table{
+	background-color: rgba(255, 255, 255, 0.4);
+}
+#nav{
+	color: black;
+}
+#posts{
+	font-weight: bold;
+	padding: 1em;
+	font-size: 100%;
+}
+#new{
+	font-weight: bold;
+	margin: 1em;
+
+}
